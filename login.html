@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="author" content="JulianDev06">
+        <title>Login</title>
+        <link rel="shortcut icon" href="img/icon.ico">  
+        <link rel="stylesheet" href="styles_login.css">
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <form id="form-login">
+                <h1><img class="logo" src="img/icon.png" alt="Bridge Logo">Bridge</h1>
+                <h2>¡Bienvenido!</h2>
+
+                <div class="input-box">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="remember-forgot">
+                    <a href="recuperar/recuperar.html">Olvide mi contraseña</a>
+                </div>
+
+                <button type="submit" class="btn">Iniciar sesión</button>
+
+                <div class="divider">o</div>
+
+                <button type="button" class="google-btn" id="btnGoogle">
+                    <img src="img/google.png" alt="Google">
+                    Sign in with Google
+                </button>
+
+                <div class="register-link">
+                    <p>No tienes una cuenta aun? <a href="register/register.html">Crear cuenta</a></p>
+                </div>
+            </form>
+        </div>
+
+        <script src="js/login.js"></script>
+    </body>
+</html>

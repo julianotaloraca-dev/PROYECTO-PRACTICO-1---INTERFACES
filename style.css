@@ -1,0 +1,981 @@
+/* =====================================================
+   REINICIO
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HTML / BODY
+===================================================== */
+html {
+    scroll-behavior: smooth; /*MIS NOTAS: Desplaza suave en el menu */
+}
+
+::-webkit-scrollbar {
+    display: none; /* MIS NOTAS: Oculta la barra de scroll */
+}
+
+* {
+    margin: 0;              
+    padding: 0;               
+    box-sizing: border-box;
+    caret-color: transparent; /*MIS NOTAS: Oculta el cursor de texto */
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f7;
+    color: #111;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+    --ancho-nav: 450px;
+    --ancho-boton: 410px;
+    --naranja: #ff5b2b;
+}
+
+
+/* =====================================================
+   LOGO PRINCIPAL
+===================================================== */
+
+.logo {
+    position: fixed;
+    z-index: 100;
+
+    left: 34px;
+    top: 16px;
+
+    width: 67px;
+    height: 67px;
+
+    object-fit: contain;
+
+    transition:
+        left 0.3s ease,
+        top 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =====================================================
+   TITULO BRIDGE
+===================================================== */
+
+body > h1 {
+    position: fixed;
+    z-index: 100;
+
+    left: 110px;
+    top: 10px;
+
+    margin: 0;
+
+    color: var(--naranja);
+
+    font-size: 47px;
+    line-height: 55px;
+
+    font-weight: 700;
+    font-style: italic;
+
+    transition:
+        left 0.3s ease,
+        top 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =====================================================
+   SUBTITULO
+===================================================== */
+
+body > h2 {
+    position: fixed;
+    z-index: 100;
+
+    left: 103px;
+    top: 69px;
+
+    margin: 0;
+
+    color: #666;
+
+    font-size: 19px;
+    line-height: 23px;
+
+    font-weight: 400;
+
+    transition:
+        left 0.3s ease,
+        top 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =====================================================
+   NAV
+===================================================== */
+
+nav {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: var(--ancho-nav);
+    height: 100vh;
+
+    background: #fff;
+
+    padding-top: 137px;
+
+    z-index: 50;
+
+    transform: translateX(0);
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+/* =====================================================
+   TITULO DEL MENU
+===================================================== */
+
+nav h3 {
+    position: relative;
+
+    width: var(--ancho-boton);
+    height: 59px;
+
+    margin-left: 23px;
+    margin-bottom: 34px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 61px;
+    padding-right: 18px;
+
+    border-radius: 15px;
+
+    background: var(--naranja);
+    color: #fff;
+
+    font-size: 24px;
+    font-weight: 400;
+
+    white-space: nowrap;
+}
+
+nav h3::before {
+    content: "\f1ec";
+
+    position: absolute;
+
+    left: 20px;
+    top: 0;
+
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+
+    font-size: 25px;
+    line-height: 59px;
+
+    color: #fff;
+}
+
+
+/* =====================================================
+   LISTA
+===================================================== */
+
+nav ul {
+    width: 100%;
+    list-style: none;
+}
+
+nav li {
+    width: 100%;
+    height: 55px;
+}
+
+
+/* =====================================================
+   ENLACES
+===================================================== */
+
+nav li a {
+    width: 100%;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 42px;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 24px;
+    font-weight: 400;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* =====================================================
+   ICONOS DEL MENU
+===================================================== */
+
+nav li a img {
+    width: 38px;
+    height: 38px;
+
+    margin-right: 20px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+nav li a:hover {
+    background: #fff4ef;
+    color: var(--naranja);
+}
+
+nav li a:hover img {
+    filter:
+        invert(45%)
+        sepia(98%)
+        saturate(2500%)
+        hue-rotate(350deg)
+        brightness(103%)
+        contrast(103%);
+}
+
+
+/* =====================================================
+   OPCION ACTIVA
+===================================================== */
+
+nav li a.active {
+    background: #fff4ef;
+    color: var(--naranja);
+}
+
+nav li a.active img {
+    filter:
+        invert(45%)
+        sepia(98%)
+        saturate(2500%)
+        hue-rotate(350deg)
+        brightness(103%)
+        contrast(103%);
+}
+
+
+/* =====================================================
+   ICONO TECHO
+===================================================== */
+
+nav li:nth-child(4) a img {
+    width: 44px;
+    height: 44px;
+
+    margin-left: -3px;
+    margin-right: 17px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    position: fixed;
+
+    left: var(--ancho-nav);
+    right: 0;
+    top: 0;
+
+    height: 104px;
+
+    background: #fff;
+
+    border-bottom: 1px solid #eee;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 40;
+
+    transition:
+        left 0.3s ease;
+}
+
+/* =====================================================
+   HAMBURGUESA
+===================================================== */
+
+header > .fa-bars {
+    margin-left: 42px;
+
+    font-size: 32px;
+
+    color: #111;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    z-index: 300;
+}
+
+header > .fa-bars:hover {
+    transform: scale(1.1);
+}
+
+
+/* =====================================================
+   NOTIFICACIONES
+===================================================== */
+
+.notificaciones {
+    position: relative;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notificaciones .fa-bell {
+    font-size: 29px;
+    color: #222;
+}
+
+.notificaciones span {
+    position: absolute;
+
+    top: -8px;
+    right: -6px;
+
+    width: 23px;
+    height: 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--naranja);
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* =====================================================
+   OCULTA EL NUMERO AL ABRIR EL PANEL
+===================================================== */
+
+.notificaciones.vista span {
+    display: none;
+}
+
+/* =====================================================
+   PANEL DE NOTIFICACIONES (agregado)
+===================================================== */
+
+.panel-notificaciones {
+    display: none; /* se muestra con JS al hacer click en la campana */
+
+    position: absolute;
+
+    top: 50px;
+    right: -7px;
+
+    width: 317px;
+    max-height: 40vh;
+
+    overflow-y: auto;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    z-index: 200;
+}
+
+.panel-notificaciones.activo {
+    display: block;
+}
+
+.panel-notificaciones-item {
+    padding: 12px 15px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.panel-notificaciones-item:last-child {
+    border-bottom: none;
+}
+
+.panel-notificaciones-version {
+    color: var(--naranja);
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.panel-notificaciones-cambios {
+    margin-top: 4px;
+
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* =====================================================
+   USUARIO
+===================================================== */
+
+.usuario {
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    white-space: nowrap;
+}
+
+.usuario img {
+    width: 65px;
+    height: 65px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+.usuario div {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 90px;
+}
+
+.usuario div span {
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #222;
+}
+
+.usuario div small {
+    margin-top: 4px;
+
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #999;
+}
+
+.usuario > .fa-chevron-down {
+    font-size: 17px;
+    color: #111;
+
+    flex-shrink: 0;
+}
+
+/* =====================================================
+   HEADER DERECHA (agrupa notificaciones + usuario)
+===================================================== */
+
+.header-derecha {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    margin-right: 28px;
+}
+
+/* =====================================================
+   CONTENIDO
+===================================================== */
+
+main {
+    position: fixed;
+
+    left: var(--ancho-nav);
+    right: 0;
+
+    top: 104px;
+    bottom: 50px;
+
+    background: #f8f8f8;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 70px;
+
+    overflow: auto;
+
+    transition:
+        left 0.3s ease;
+}
+
+main > img {
+    display: block;
+
+    width: 470px;
+    max-width: 55%;
+
+    height: auto;
+    max-height: 357px;
+
+    object-fit: contain;
+}
+
+main .bienvenida {
+    margin-top: 4px;
+
+    font-size: 36px;
+    line-height: 1.2;
+
+    font-weight: 400;
+
+    color: #111;
+
+    text-align: center;
+}
+
+main p {
+    width: 400px;
+    max-width: 80%;
+
+    margin-top: 0;
+
+    font-size: 27px;
+    line-height: 1.25;
+
+    color: #8c8c8c;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    display: none;
+}
+
+
+/* =====================================================
+   MENU CERRADO - PC
+===================================================== */
+
+body.menu-cerrado nav {
+    transform: translateX(-100%);
+}
+
+body.menu-cerrado header {
+    left: 0;
+}
+
+body.menu-cerrado main {
+    left: 0;
+}
+
+
+/* =====================================================
+   LOGO CENTRADO - PC MENU CERRADO
+===================================================== */
+
+body.menu-cerrado .logo {
+    left: 42.5%;
+
+    transform: translateX(-50%);
+
+    top: 16px;
+}
+
+
+/* =====================================================
+   TITULO CENTRADO - PC MENU CERRADO
+===================================================== */
+
+body.menu-cerrado > h1 {
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    top: 10px;
+}
+
+
+/* =====================================================
+   SUBTITULO CENTRADO - PC MENU CERRADO
+===================================================== */
+
+body.menu-cerrado > h2 {
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    top: 69px;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   CALCULADORA DE MURO DE LADRILLO
+   AGREGADO - NO MODIFICA EL CSS ORIGINAL
+===================================================== */
+
+.muro-calculadora {
+    width: 805px;
+    max-width: 100%;
+}
+
+
+/* =====================================================
+   TITULO DEL MURO
+===================================================== */
+
+.muro-titulo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.muro-titulo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-right: 14px;
+}
+
+.muro-titulo-texto h2 {
+    margin: 0;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+    color: #111;
+}
+
+.muro-titulo-texto p {
+    margin: 4px 0 0;
+    font-size: 18px;
+    color: #888;
+}
+
+
+/* =====================================================
+   DOS PANELES
+===================================================== */
+
+.muro-paneles {
+    display: grid;
+    grid-template-columns: 393px 393px;
+    gap: 20px;
+}
+
+
+/* =====================================================
+   PANEL DATOS
+===================================================== */
+
+.muro-datos {
+    min-height: 516px;
+    padding: 36px 34px;
+    border: 1px solid #bdbdbd;
+    border-radius: 22px;
+    background: #fff;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.muro-label {
+    display: block;
+    margin-bottom: 17px;
+    font-size: 18px;
+    color: #111;
+}
+
+
+/* =====================================================
+   ESPESOR
+===================================================== */
+
+.muro-espesores {
+    width: 100%;
+    height: 56px;
+    margin-bottom: 27px;
+
+    border: 1px solid #bbb;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.muro-espesor-opcion {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.muro-espesor-opcion input {
+    display: none;
+}
+
+.muro-radio {
+    width: 25px;
+    height: 25px;
+
+    border: 1px solid #aaa;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.muro-espesor-opcion input:checked + .muro-radio {
+    border: 2px solid #ff7048;
+}
+
+.muro-espesor-opcion input:checked + .muro-radio::after {
+    content: "";
+
+    width: 13px;
+    height: 13px;
+
+    border-radius: 50%;
+    background: #ff7048;
+}
+
+
+/* =====================================================
+   CAMPOS
+===================================================== */
+
+.muro-campo {
+    width: 100%;
+    height: 56px;
+    margin-bottom: 27px;
+
+    padding: 0 12px;
+
+    border: 1px solid #bbb;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+}
+
+.muro-icono-campo {
+    width: 35px;
+    margin-right: 8px;
+
+    text-align: center;
+    font-size: 25px;
+}
+
+.muro-campo input {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 18px;
+}
+
+.muro-campo input::placeholder {
+    color: #999;
+}
+
+
+/* =====================================================
+   BOTON CALCULAR
+===================================================== */
+
+.muro-boton {
+    width: 270px;
+    height: 61px;
+
+    margin: auto auto 0;
+
+    border: none;
+    border-radius: 15px;
+
+    background: #ff7048;
+    color: #fff;
+
+    font-size: 27px;
+
+    cursor: pointer;
+}
+
+.muro-boton i {
+    margin-right: 15px;
+}
+
+
+/* =====================================================
+   PANEL RESULTADOS
+===================================================== */
+
+.muro-resultados {
+    min-height: 463px;
+
+    padding: 20px 23px;
+
+    border: 1px solid #bdbdbd;
+    border-radius: 22px;
+
+    background: #fff;
+}
+
+
+/* =====================================================
+   TITULO RESULTADOS
+===================================================== */
+
+.muro-resultados-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 24px;
+
+    color: #ff7048;
+
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.muro-resultados-titulo i {
+    font-size: 35px;
+}
+
+
+/* =====================================================
+   SUPERFICIE
+===================================================== */
+
+.muro-superficie {
+    width: 100%;
+    height: 119px;
+
+    margin-bottom: 35px;
+
+    border-radius: 12px;
+
+    background: #ffe5dc;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.muro-superficie span {
+    margin-bottom: 17px;
+    font-size: 18px;
+}
+
+.muro-superficie strong {
+    color: #ff7048;
+    font-size: 27px;
+}
+
+
+/* =====================================================
+   MATERIALES
+===================================================== */
+
+.muro-materiales {
+    width: 100%;
+
+    overflow: hidden;
+
+    border: 1px solid #bbb;
+    border-radius: 12px;
+}
+
+.muro-material {
+    height: 59px;
+
+    padding: 0 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 18px;
+}
+
+.muro-material:not(:last-child) {
+    border-bottom: 1px solid #bbb;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="author" content="JulianDev06">
+        <title>Recuperar contraseña</title>
+        <link rel="shortcut icon" href="../img/icon.ico">  
+        <link rel="stylesheet" href="../styles_login.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <form id="form-recuperar">
+                <h1><img class="logo" src="../img/icon.png" alt="Bridge Logo">Bridge</h1>
+                <h2>Recuperar contraseña</h2>
+
+                <div class="input-box">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+
+                <div class="input-box" id="cajaNuevaPassword" style="display: none;">
+                    <label for="password">Nueva contraseña:</label>
+                    <input type="password" id="password" name="password">
+                </div>
+
+                <div class="input-box" id="cajaConfirmarPassword" style="display: none;">
+                    <label for="confirm-password">Confirmar nueva contraseña:</label>
+                    <input type="password" id="confirm-password" name="confirm_password">
+                </div>
+
+                <button type="submit" class="btn" id="btnAccion">Buscar cuenta</button>
+
+                <div class="register-link">
+                    <p>¿Ya la recordaste? <a href="../login.html">Iniciar sesión</a></p>
+                </div>
+            </form>
+        </div>
+
+        <script src="../js/recuperar.js"></script>
+    </body>
+</html>

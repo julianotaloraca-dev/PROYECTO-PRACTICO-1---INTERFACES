@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            if (!localStorage.getItem("usuarioActivo")) {
+            window.location.href = "login.html";
+            }
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Bridge</title>
+        <meta name="description" content="Bridge es una calculadora de materiales de construccion, que te permite calcular la cantidad de materiales que necesitas para tu proyecto de manera sencilla.">
+        <meta name="keywords" content="calculadora, materiales, construccion, calculator, sencillo, construction, calculator of materials, calculadora de materiales, simple, responsive">
+        <meta name="author" content="JulianDev06">
+        <link rel="shortcut icon" href="img/icon.ico">  
+        <script src="https://kit.fontawesome.com/9d1a86738f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <img class="logo" src="img/icon.png" alt="Bridge Logo">
+        <h1>Bridge</h1>
+        <h2>Calcula facil tus materiales</h2>
+        <nav>
+            <h3>Calculadora de Materiales</h3>
+            <ul>
+                <li>
+                    <a href="#muro">
+                        <img src="img/nav/muro.ico" alt="icono de muro">
+                        Muro de ladrillo
+                    </a>
+                </li>
+                <li>
+                    <a href="#viga">
+                        <img src="img/nav/viga.ico" alt="icono de viga">
+                        Viga de hormigón
+                    </a>
+                </li>
+                <li>
+                    <a href="#columna">
+                        <img src="img/nav/columna.ico" alt="icono de columna">
+                        Columna de hormigón
+                    </a>
+                </li>
+                 <li>
+                    <a href="#contrapiso">
+                        <img src="img/nav/contrapiso.ico" alt="icono de contrapiso">
+                        Contrapiso
+                    </a>
+                </li>
+                <li>
+                    <a href="#techo">
+                        <img src="img/nav/techo.ico" alt="icono de techo">
+                        Techo
+                    </a>
+                </li>
+                <li>
+                    <a href="#piso">
+                        <img src="img/nav/piso.ico" alt="icono de piso">
+                        Pisos
+                    </a>
+                </li>
+                <li>
+                    <a href="#pintura">
+                        <img src="img/nav/pintura.ico" alt="icono de pintura">
+                        Pintura
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <header>
+            <i class="fa-solid fa-bars"></i>
+
+            <div class="header-derecha">
+
+                <div class="notificaciones">
+                    <i class="fa-solid fa-bell"></i>
+                    <span></span>
+                </div>
+
+                <div class="usuario">
+                    <img src="img/user.png" alt="Imagen de usuario">
+
+                    <div>
+                        <span>Hola, Usuario</span>
+                        <small>Usuario</small>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+            </div>
+        </header>
+        <main>
+            <img src="img/home.png" alt="Hola usuario, bienvenido a Bridge">
+            <h2 class="bienvenida">¡Hola, Usuario!</h2>
+            <p>Selecciona una opción del menú</p>
+        </main>
+        <footer>
+            <p>&copy; 2026 Bridge. All rights reserve.</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
